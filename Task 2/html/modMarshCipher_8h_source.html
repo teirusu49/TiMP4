@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modMarshCipher: Исходный файл modMarshCipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">modMarshCipher
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">modMarshCipher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="modMarshCipher_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;locale&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cctype&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*** @class modAlphaCipher</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">* * @author Шмагайло Д.В.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">* * @date 17.05.23</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">* * @file modAlphaCipher.h</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">* * @brief Шифрование методом Гронсфельда</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">* * @details Для зашифрования и расшифрования сообщения</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">предназначны методы encrypt и decrypt соответственно.*</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">Текст на обработку передается в качестве параметра.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">* * @warnings Реализация только для английского языка!*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmodMarshCipher.html">modMarshCipher</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#ab974ea032b144d110cde3e71eec74333">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classmodMarshCipher.html#ab974ea032b144d110cde3e71eec74333">key</a>; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#a81006fece3b6dc4a82e3ec4d12dd9686">   35</a></span>&#160;    std::string <a class="code" href="classmodMarshCipher.html#a81006fece3b6dc4a82e3ec4d12dd9686">getValidOpenText</a>(<span class="keyword">const</span> std::string &amp; s);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#a72be14a747e2a97f442e245e4c6a95d7">   42</a></span>&#160;    std::string <a class="code" href="classmodMarshCipher.html#a72be14a747e2a97f442e245e4c6a95d7">getValidCipherText</a>(<span class="keyword">const</span> std::string &amp; s);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#a4450d9147fd254705ff8fcef2211305f">   48</a></span>&#160;    std::string <a class="code" href="classmodMarshCipher.html#a4450d9147fd254705ff8fcef2211305f">getValidKey</a>(<span class="keyword">const</span> std::string &amp; s);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#a9caca984609e8717a6882980f2828ff7">   50</a></span>&#160;    <a class="code" href="classmodMarshCipher.html#a9caca984609e8717a6882980f2828ff7">modMarshCipher</a>()=<span class="keyword">delete</span>; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#ae260fdcc1550701bf5820fa86b925995">   59</a></span>&#160;    <a class="code" href="classmodMarshCipher.html#ae260fdcc1550701bf5820fa86b925995">modMarshCipher</a>(<span class="keyword">const</span> std::string&amp; key1); </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#a3b886285e0a4384c62b3540bf9cdbd42">   68</a></span>&#160;    std::string <a class="code" href="classmodMarshCipher.html#a3b886285e0a4384c62b3540bf9cdbd42">encrypt</a>(<span class="keyword">const</span> std::string&amp; open_text); </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classmodMarshCipher.html#ad66ce1df1d812ead98f9fde082022069">   77</a></span>&#160;    std::string <a class="code" href="classmodMarshCipher.html#ad66ce1df1d812ead98f9fde082022069">decrypt</a>(<span class="keyword">const</span> std::string&amp; cipher_text);<span class="comment">//&lt;расшифрование</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/*** @class cipher_error</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">* * @author Шмагайло Д.В.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">* * @date 17.05.23</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">* * @file modMarshCipher.h</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">* * @brief Класса-исключение</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">* * @details Для возбуждения исключений</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcipher__error.html">   86</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcipher__error.html">cipher_error</a>: <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html">cipher_error</a> (<span class="keyword">const</span> std::string&amp; what_arg):</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html">cipher_error</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="ttc" id="aclasscipher__error_html"><div class="ttname"><a href="classcipher__error.html">cipher_error</a></div><div class="ttdef"><b>Definition:</b> modMarshCipher.h:87</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html"><div class="ttname"><a href="classmodMarshCipher.html">modMarshCipher</a></div><div class="ttdef"><b>Definition:</b> modMarshCipher.h:27</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_a3b886285e0a4384c62b3540bf9cdbd42"><div class="ttname"><a href="classmodMarshCipher.html#a3b886285e0a4384c62b3540bf9cdbd42">modMarshCipher::encrypt</a></div><div class="ttdeci">std::string encrypt(const std::string &amp;open_text)</div><div class="ttdoc">Зашифрование</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_a4450d9147fd254705ff8fcef2211305f"><div class="ttname"><a href="classmodMarshCipher.html#a4450d9147fd254705ff8fcef2211305f">modMarshCipher::getValidKey</a></div><div class="ttdeci">std::string getValidKey(const std::string &amp;s)</div><div class="ttdoc">Метод класса, проверяющий ключ на валидность.</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_a72be14a747e2a97f442e245e4c6a95d7"><div class="ttname"><a href="classmodMarshCipher.html#a72be14a747e2a97f442e245e4c6a95d7">modMarshCipher::getValidCipherText</a></div><div class="ttdeci">std::string getValidCipherText(const std::string &amp;s)</div><div class="ttdoc">Метод класса, проверяющий расшифрованный текст на валидность.</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_a81006fece3b6dc4a82e3ec4d12dd9686"><div class="ttname"><a href="classmodMarshCipher.html#a81006fece3b6dc4a82e3ec4d12dd9686">modMarshCipher::getValidOpenText</a></div><div class="ttdeci">std::string getValidOpenText(const std::string &amp;s)</div><div class="ttdoc">Метод класса, проверяющий текст на валидность.</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_a9caca984609e8717a6882980f2828ff7"><div class="ttname"><a href="classmodMarshCipher.html#a9caca984609e8717a6882980f2828ff7">modMarshCipher::modMarshCipher</a></div><div class="ttdeci">modMarshCipher()=delete</div><div class="ttdoc">запретим конструктор без параметров</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_ab974ea032b144d110cde3e71eec74333"><div class="ttname"><a href="classmodMarshCipher.html#ab974ea032b144d110cde3e71eec74333">modMarshCipher::key</a></div><div class="ttdeci">int key</div><div class="ttdoc">ключ</div><div class="ttdef"><b>Definition:</b> modMarshCipher.h:29</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_ad66ce1df1d812ead98f9fde082022069"><div class="ttname"><a href="classmodMarshCipher.html#ad66ce1df1d812ead98f9fde082022069">modMarshCipher::decrypt</a></div><div class="ttdeci">std::string decrypt(const std::string &amp;cipher_text)</div><div class="ttdoc">Расшифрование</div></div>
+<div class="ttc" id="aclassmodMarshCipher_html_ae260fdcc1550701bf5820fa86b925995"><div class="ttname"><a href="classmodMarshCipher.html#ae260fdcc1550701bf5820fa86b925995">modMarshCipher::modMarshCipher</a></div><div class="ttdeci">modMarshCipher(const std::string &amp;key1)</div><div class="ttdoc">Конструктор для создания объекта, хранящего в себе ключ шифрования.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
