@@ -1,0 +1,158 @@
+\hypertarget{classmodMarshCipher}{}\doxysection{Класс mod\+Marsh\+Cipher}
+\label{classmodMarshCipher}\index{modMarshCipher@{modMarshCipher}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodMarshCipher_a9caca984609e8717a6882980f2828ff7}\label{classmodMarshCipher_a9caca984609e8717a6882980f2828ff7}} 
+\mbox{\hyperlink{classmodMarshCipher_a9caca984609e8717a6882980f2828ff7}{mod\+Marsh\+Cipher}} ()=delete
+\begin{DoxyCompactList}\small\item\em запретим конструктор без параметров \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmodMarshCipher_ae260fdcc1550701bf5820fa86b925995}{mod\+Marsh\+Cipher}} (const std\+::string \&key1)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания объекта, хранящего в себе ключ шифрования. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmodMarshCipher_a3b886285e0a4384c62b3540bf9cdbd42}{encrypt}} (const std\+::string \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Зашифрование \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmodMarshCipher_ad66ce1df1d812ead98f9fde082022069}{decrypt}} (const std\+::string \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифрование \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmodMarshCipher_a81006fece3b6dc4a82e3ec4d12dd9686}{get\+Valid\+Open\+Text}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий текст на валидность. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmodMarshCipher_a72be14a747e2a97f442e245e4c6a95d7}{get\+Valid\+Cipher\+Text}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий расшифрованный текст на валидность. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmodMarshCipher_a4450d9147fd254705ff8fcef2211305f}{get\+Valid\+Key}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий ключ на валидность. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodMarshCipher_ab974ea032b144d110cde3e71eec74333}\label{classmodMarshCipher_ab974ea032b144d110cde3e71eec74333}} 
+int \mbox{\hyperlink{classmodMarshCipher_ab974ea032b144d110cde3e71eec74333}{key}}
+\begin{DoxyCompactList}\small\item\em ключ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classmodMarshCipher_ae260fdcc1550701bf5820fa86b925995}\label{classmodMarshCipher_ae260fdcc1550701bf5820fa86b925995}} 
+\index{modMarshCipher@{modMarshCipher}!modMarshCipher@{modMarshCipher}}
+\index{modMarshCipher@{modMarshCipher}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{modMarshCipher()}{modMarshCipher()}}
+{\footnotesize\ttfamily mod\+Marsh\+Cipher\+::mod\+Marsh\+Cipher (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key1 }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания объекта, хранящего в себе ключ шифрования. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Открытый текст на английском языке. @warnings Текст не должен быть пустой строкой. Текст не должен содержать пробелы. В тексте могут содержаться знаки препинания и цифры. конструктор для установки ключа \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classmodMarshCipher_ad66ce1df1d812ead98f9fde082022069}\label{classmodMarshCipher_ad66ce1df1d812ead98f9fde082022069}} 
+\index{modMarshCipher@{modMarshCipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::string mod\+Marsh\+Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Расшифрование 
+
+
+\begin{DoxyItemize}
+\item $\ast$ 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Зашифрованный текст на английском языке. Текст не должен быть пустой строкой.$\ast$ Текст не должен содержать пробелы.\\
+\hline
+\end{DoxyParams}
+
+\item В тексте не могут содержаться знаки препинания и цифры.
+\item \begin{DoxyReturn}{Возвращает}
+result Зашифрованный текст. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classmodMarshCipher_a3b886285e0a4384c62b3540bf9cdbd42}\label{classmodMarshCipher_a3b886285e0a4384c62b3540bf9cdbd42}} 
+\index{modMarshCipher@{modMarshCipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::string mod\+Marsh\+Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Зашифрование 
+
+
+\begin{DoxyItemize}
+\item $\ast$ 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Открытый текст на английском языке. Текст не должен быть пустой строкой.$\ast$ Текст может содержать пробелы.\\
+\hline
+\end{DoxyParams}
+
+\item В тексте могут содержаться знаки препинания и цифры.
+\item \begin{DoxyReturn}{Возвращает}
+result Зашифрованный текст. зашифрование 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classmodMarshCipher_a72be14a747e2a97f442e245e4c6a95d7}\label{classmodMarshCipher_a72be14a747e2a97f442e245e4c6a95d7}} 
+\index{modMarshCipher@{modMarshCipher}!getValidCipherText@{getValidCipherText}}
+\index{getValidCipherText@{getValidCipherText}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{getValidCipherText()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::string mod\+Marsh\+Cipher\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий расшифрованный текст на валидность. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Зашифрованный текст на английском языке. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodMarshCipher_a4450d9147fd254705ff8fcef2211305f}\label{classmodMarshCipher_a4450d9147fd254705ff8fcef2211305f}} 
+\index{modMarshCipher@{modMarshCipher}!getValidKey@{getValidKey}}
+\index{getValidKey@{getValidKey}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{getValidKey()}{getValidKey()}}
+{\footnotesize\ttfamily std\+::string mod\+Marsh\+Cipher\+::get\+Valid\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий ключ на валидность. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodMarshCipher_a81006fece3b6dc4a82e3ec4d12dd9686}\label{classmodMarshCipher_a81006fece3b6dc4a82e3ec4d12dd9686}} 
+\index{modMarshCipher@{modMarshCipher}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!modMarshCipher@{modMarshCipher}}
+\doxysubsubsection{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::string mod\+Marsh\+Cipher\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий текст на валидность. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Открытый текст на английском языке. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{modMarshCipher_8h}{mod\+Marsh\+Cipher.\+h}}\end{DoxyCompactItemize}

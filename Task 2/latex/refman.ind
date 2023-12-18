@@ -1,0 +1,35 @@
+\begin{theindex}
+
+  \item {cipher\_error}, \hyperpage{7}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {modMarshCipher}, \hyperpage{9}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {modMarshCipher}, \hyperpage{9}
+
+  \indexspace
+
+  \item {getValidCipherText}
+    \subitem {modMarshCipher}, \hyperpage{10}
+  \item {getValidKey}
+    \subitem {modMarshCipher}, \hyperpage{10}
+  \item {getValidOpenText}
+    \subitem {modMarshCipher}, \hyperpage{10}
+
+  \indexspace
+
+  \item {modMarshCipher}, \hyperpage{8}
+    \subitem {decrypt}, \hyperpage{9}
+    \subitem {encrypt}, \hyperpage{9}
+    \subitem {getValidCipherText}, \hyperpage{10}
+    \subitem {getValidKey}, \hyperpage{10}
+    \subitem {getValidOpenText}, \hyperpage{10}
+    \subitem {modMarshCipher}, \hyperpage{8}
+  \item {modMarshCipher.h}, \hyperpage{13}
+
+\end{theindex}
